@@ -1,0 +1,21 @@
+registro_id,colaborador_id,area,mes,dias_previstos,dias_faltas,horas_extras,horas_extras_indevidas_art58,divergencias_ponto,observacao
+P001,C002,Operações,2025-01,22,1,18,2,3,Ajuste de marcação
+P002,C006,Logística,2025-01,22,2,22,4,4,Entrada sem registro
+P003,C010,Operações,2025-01,22,1,20,3,3,Saída antecipada
+P004,C017,Operações,2025-02,20,2,24,5,5,Atrasos recorrentes
+P005,C026,Operações,2025-02,20,3,26,6,5,Aguardando justificativa
+P006,C031,Operações,2025-03,21,3,28,7,6,Escala especial
+P007,C020,Logística,2025-03,21,1,18,2,3,Banco de horas
+P008,C033,Logística,2025-04,22,2,16,2,3,Falta abonada parcial
+P009,C039,Facilities,2025-04,22,2,14,1,4,Ajuste manual
+P010,C040,TI,2025-05,21,1,12,0,2,Plantão suporte
+P011,C019,Facilities,2025-05,21,1,16,3,3,Troca de turno
+P012,C005,DP,2025-06,20,1,12,2,2,Esquecimento de ponto
+P013,C028,DP,2025-06,20,0,10,1,2,Fechamento folha
+P014,C014,Financeiro,2025-07,23,1,9,1,2,Entrega fiscal
+P015,C008,Facilities,2025-07,23,1,8,0,2,Evento interno
+P016,C027,Financeiro,2025-08,21,1,8,0,1,Rotina contábil
+P017,C037,Operações,2025-08,21,1,19,2,2,Cobertura ausência
+P018,C034,Financeiro,2025-09,22,0,6,0,0,Sem divergência relevante
+P019,C003,TI,2025-09,22,0,6,0,0,Projeto analytics
+P020,C001,RH,2025-10,23,0,4,0,1,Entrevistas finais

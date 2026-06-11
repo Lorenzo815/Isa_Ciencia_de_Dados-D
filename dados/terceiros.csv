@@ -1,0 +1,19 @@
+registro_id,mes,fornecedor,servico,acao,quantidade,status,custo_estimado,responsavel,observacao
+T001,2025-01,AlimentaMais,Refeitório,Ajuste de cardápio,1,Concluído,350,Marina,Incluiu opção vegetariana
+T002,2025-01,Portaria Segura,Portaria,Emissão de crachá provisório,18,Concluído,180,Joana,Pico de integrações
+T003,2025-01,MoveBem,Transporte,Inclusão de colaborador em rota,7,Concluído,840,Otavio,Nova escala noturna
+T004,2025-02,AlimentaMais,Refeitório,Reclamação sobre fila,1,Em andamento,0,Marina,Revisar horário de pico
+T005,2025-02,Portaria Segura,Portaria,Bloqueio de crachá,4,Concluído,40,Joana,Perdas reportadas
+T006,2025-02,MoveBem,Transporte,Alteração de endereço,6,Concluído,300,Otavio,Atualização de rota
+T007,2025-03,AlimentaMais,Refeitório,Ação de redução de desperdício,1,Concluído,-500,Marina,Economia estimada
+T008,2025-03,Portaria Segura,Portaria,Emissão de crachá provisório,11,Concluído,110,Joana,Visitantes de auditoria
+T009,2025-03,MoveBem,Transporte,Exclusão de colaborador da rota,5,Concluído,-450,Otavio,Desligamentos e home office
+T010,2025-04,AlimentaMais,Refeitório,Coffee de integração,3,Concluído,900,Marina,Turmas de onboarding
+T011,2025-04,Portaria Segura,Portaria,Revisão de acesso,1,Em andamento,120,Joana,Checklist mensal
+T012,2025-04,MoveBem,Transporte,Inclusão de colaborador em rota,9,Concluído,1080,Otavio,Expansão turno B
+T013,2025-05,AlimentaMais,Refeitório,Pesquisa de satisfação,1,Concluído,200,Marina,Coleta via formulário
+T014,2025-05,Portaria Segura,Portaria,Bloqueio de crachá,7,Concluído,70,Joana,Terceiros encerrados
+T015,2025-05,MoveBem,Transporte,Alteração de escala,8,Em andamento,480,Otavio,Troca temporária
+T016,2025-06,AlimentaMais,Refeitório,Ação de corte de gastos,1,Concluído,-800,Marina,Troca de fornecedor de itens
+T017,2025-06,Portaria Segura,Portaria,Emissão de crachá provisório,14,Concluído,140,Joana,Visitantes e temporários
+T018,2025-06,MoveBem,Transporte,Alteração de endereço,10,Concluído,500,Otavio,Mudanças residenciais

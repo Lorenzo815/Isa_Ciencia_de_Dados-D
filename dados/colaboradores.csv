@@ -1,0 +1,41 @@
+colaborador_id,area,cargo,nivel,genero,raca,idade,tempo_empresa_meses,salario_mensal,horas_treinamento_ano,absenteismo_dias_ano,horas_extras_mes,divergencias_ponto_mes,nota_performance,desligou_12m
+C001,RH,Analista de RH,Pleno,Feminino,Branca,32,28,5200,22,3,4,1,4.4,0
+C002,Operações,Operador,Junior,Masculino,Parda,27,14,2600,14,7,18,3,3.5,1
+C003,TI,Analista de Dados,Pleno,Feminino,Preta,29,20,7200,36,2,6,0,4.7,0
+C004,Financeiro,Analista Financeiro,Pleno,Masculino,Branca,35,46,6100,18,4,5,1,4.0,0
+C005,DP,Assistente de DP,Junior,Feminino,Parda,24,9,3300,8,6,12,2,3.4,1
+C006,Logística,Motorista,Junior,Masculino,Preta,41,38,3100,10,9,22,4,3.2,1
+C007,RH,Especialista D&I,Senior,Não binário,Parda,36,18,8900,28,1,3,0,4.8,0
+C008,Facilities,Recepcionista,Junior,Feminino,Branca,26,12,2800,8,5,8,2,3.8,0
+C009,SST,Técnico de Segurança,Pleno,Masculino,Parda,39,52,5800,24,2,10,1,4.5,0
+C010,Operações,Técnico de Manutenção,Pleno,Masculino,Branca,44,60,5400,10,8,20,3,3.6,1
+C011,RH,Analista Treinamento,Pleno,Feminino,Preta,31,24,5600,34,2,4,0,4.6,0
+C012,Suprimentos,Analista Compras,Pleno,Feminino,Amarela,33,30,5900,16,3,6,1,4.1,0
+C013,Administrativo,Auxiliar Administrativo,Junior,Feminino,Parda,22,7,2500,10,4,7,1,3.9,0
+C014,Financeiro,Assistente Fiscal,Junior,Masculino,Parda,28,16,3600,12,5,9,2,3.7,0
+C015,TI,Desenvolvedor Python,Pleno,Masculino,Branca,30,22,7800,40,1,5,0,4.9,0
+C016,RH,Gerente de RH,Gerência,Feminino,Branca,45,72,14500,18,2,6,0,4.3,0
+C017,Operações,Operador,Junior,Feminino,Preta,25,8,2550,12,10,24,5,3.0,1
+C018,DP,Analista Benefícios,Pleno,Feminino,Parda,34,40,5700,18,3,6,1,4.2,0
+C019,Facilities,Supervisor Portaria,Senior,Masculino,Preta,42,55,6500,8,7,16,3,3.5,1
+C020,Logística,Operador Empilhadeira,Junior,Masculino,Parda,37,26,3400,12,6,18,3,3.6,0
+C021,RH,Analista Cargos Salários,Pleno,Feminino,Branca,38,48,6200,30,2,4,0,4.6,0
+C022,SST,Enfermeiro Trabalho,Pleno,Feminino,Parda,40,34,6900,20,3,8,1,4.4,0
+C023,Administrativo,Aprendiz,Aprendiz,Feminino,Preta,19,5,1500,8,2,0,0,4.0,0
+C024,TI,Estagiário Dados,Estágio,Masculino,Parda,21,6,2200,28,1,2,0,4.2,0
+C025,RH,Coordenador Treinamento,Senior,Masculino,Branca,39,44,9200,26,2,7,1,4.5,0
+C026,Operações,Operador,Junior,Masculino,Parda,29,11,2650,8,11,26,5,2.9,1
+C027,Financeiro,Analista Contábil,Pleno,Feminino,Preta,36,32,6000,10,4,8,1,3.9,0
+C028,DP,Assistente de DP,Junior,Masculino,Branca,27,18,3400,14,5,10,2,3.8,0
+C029,Facilities,Recepcionista,Junior,Feminino,Parda,30,21,2900,8,6,9,2,3.7,0
+C030,RH,Analista de RH,Pleno,Feminino,Indígena,33,19,5300,24,2,5,0,4.7,0
+C031,Operações,Operador,Junior,Masculino,Branca,46,70,2850,6,12,28,6,2.8,1
+C032,TI,Engenheira de Dados,Senior,Feminino,Parda,37,36,11000,42,1,4,0,4.8,0
+C033,Logística,Assistente Logística,Junior,Feminino,Preta,24,13,3000,10,8,16,3,3.3,1
+C034,Financeiro,Coordenador Financeiro,Senior,Masculino,Branca,43,64,9800,16,2,6,0,4.2,0
+C035,RH,Analista D&I,Pleno,Feminino,Parda,28,17,5500,30,1,3,0,4.6,0
+C036,SST,Auxiliar Enfermagem,Junior,Feminino,Branca,31,29,3900,16,4,8,1,4.0,0
+C037,Operações,Líder Produção,Senior,Masculino,Parda,40,50,7200,12,7,19,2,3.7,0
+C038,DP,Analista Folha,Senior,Feminino,Preta,41,58,7600,18,2,7,0,4.4,0
+C039,Facilities,Auxiliar Limpeza,Junior,Feminino,Parda,48,33,2100,6,9,14,4,3.1,1
+C040,TI,Suporte Técnico,Junior,Masculino,Branca,26,10,4200,14,5,12,2,3.5,1

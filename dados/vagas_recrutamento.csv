@@ -1,0 +1,26 @@
+vaga_id,cargo,area,senioridade,source_of_hire,data_abertura,data_admissao,time_to_hire_dias,candidatos,entrevistas,ofertas,contratados,custo_divulgacao,recrutador
+V001,Analista de RH,RH,Pleno,LinkedIn,2025-01-03,2025-02-05,33,74,12,3,1,850,Ana
+V002,Auxiliar Administrativo,Administrativo,Junior,Indicação,2025-01-08,2025-01-29,21,41,8,2,1,120,Bruno
+V003,Operador de Produção,Operações,Junior,Agência,2025-01-12,2025-02-21,40,96,18,4,2,1450,Carla
+V004,Analista Financeiro,Financeiro,Pleno,LinkedIn,2025-02-02,2025-03-06,32,58,10,2,1,760,Ana
+V005,Técnico de Segurança,SST,Pleno,Indeed,2025-02-10,2025-03-24,42,63,11,2,1,620,Bruno
+V006,Estagiário de Dados,TI,Estágio,Universidades,2025-02-15,2025-03-04,17,89,14,3,1,300,Carla
+V007,Coordenador de Treinamento,RH,Senior,LinkedIn,2025-03-01,2025-04-16,46,39,7,2,1,980,Ana
+V008,Assistente de DP,DP,Junior,Indicação,2025-03-06,2025-03-28,22,52,9,2,1,110,Bruno
+V009,Analista de Compras,Suprimentos,Pleno,Indeed,2025-03-14,2025-04-18,35,47,8,2,1,540,Carla
+V010,Motorista,Logística,Junior,Agência,2025-04-02,2025-05-17,45,68,13,3,2,1300,Ana
+V011,Analista de Dados,TI,Pleno,LinkedIn,2025-04-05,2025-05-08,33,82,15,3,1,920,Bruno
+V012,Supervisor de Portaria,Facilities,Senior,Indicação,2025-04-17,2025-05-15,28,31,6,2,1,90,Carla
+V013,Enfermeiro do Trabalho,SST,Pleno,Indeed,2025-05-03,2025-06-19,47,44,8,1,1,650,Ana
+V014,Analista de Cargos e Salários,RH,Pleno,LinkedIn,2025-05-09,2025-06-10,32,56,10,2,1,780,Bruno
+V015,Aprendiz Administrativo,Administrativo,Aprendiz,Universidades,2025-05-20,2025-06-07,18,77,12,3,1,220,Carla
+V016,Operador de Empilhadeira,Logística,Junior,Agência,2025-06-04,2025-07-16,42,71,12,3,2,1250,Ana
+V017,Especialista D&I,RH,Senior,LinkedIn,2025-06-11,2025-07-29,48,35,6,1,1,1000,Bruno
+V018,Analista Contábil,Financeiro,Pleno,Indeed,2025-07-01,2025-08-01,31,49,9,2,1,520,Carla
+V019,Recepcionista,Facilities,Junior,Indicação,2025-07-07,2025-07-26,19,46,8,2,1,80,Ana
+V020,Desenvolvedor Python,TI,Pleno,LinkedIn,2025-07-15,2025-08-29,45,91,16,3,1,980,Bruno
+V021,Analista de Benefícios,DP,Pleno,Indeed,2025-08-03,2025-09-08,36,53,9,2,1,560,Carla
+V022,Técnico de Manutenção,Operações,Pleno,Agência,2025-08-12,2025-09-25,44,59,11,2,1,1160,Ana
+V023,Gerente de RH,RH,Gerência,LinkedIn,2025-09-01,2025-10-24,53,28,6,2,1,1400,Bruno
+V024,Assistente Fiscal,Financeiro,Junior,Indicação,2025-09-09,2025-10-01,22,43,8,2,1,100,Carla
+V025,Analista de Treinamento,RH,Pleno,LinkedIn,2025-10-04,2025-11-11,38,61,11,3,1,820,Ana

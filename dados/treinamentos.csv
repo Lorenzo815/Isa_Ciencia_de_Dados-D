@@ -1,0 +1,31 @@
+colaborador_id,area,cargo,genero,raca,treinamento,mes,horas_treinamento,obrigatorio,concluiu,nota_eficacia,custo_coffee,modalidade
+C001,RH,Analista de RH,Feminino,Branca,Integração,2025-01,6,Sim,Sim,4.6,180,Presencial
+C002,Operações,Operador,Masculino,Parda,Segurança no Trabalho,2025-01,8,Sim,Sim,4.2,260,Presencial
+C003,TI,Analista de Dados,Feminino,Preta,Python Básico,2025-01,12,Não,Sim,4.8,0,Online
+C004,Financeiro,Analista Financeiro,Masculino,Branca,Excel para Indicadores,2025-02,10,Não,Sim,4.1,120,Híbrido
+C005,DP,Assistente de DP,Feminino,Parda,Legislação Trabalhista,2025-02,8,Sim,Não,,90,Online
+C006,Logística,Motorista,Masculino,Preta,Direção Defensiva,2025-02,6,Sim,Sim,3.9,210,Presencial
+C007,RH,Especialista D&I,Não binário,Parda,Diversidade e Inclusão,2025-03,6,Não,Sim,4.9,75,Híbrido
+C008,Facilities,Recepcionista,Feminino,Branca,Atendimento ao Cliente,2025-03,4,Não,Sim,4.3,60,Presencial
+C009,SST,Técnico de Segurança,Masculino,Parda,NR-35,2025-03,8,Sim,Sim,4.5,240,Presencial
+C010,Operações,Técnico de Manutenção,Masculino,Branca,Manutenção Preventiva,2025-04,10,Sim,Não,,280,Presencial
+C011,RH,Analista Treinamento,Feminino,Preta,Design Instrucional,2025-04,14,Não,Sim,4.7,0,Online
+C012,Suprimentos,Analista Compras,Feminino,Amarela,Negociação,2025-04,8,Não,Sim,4.0,110,Híbrido
+C013,Administrativo,Auxiliar Administrativo,Feminino,Parda,Excel Básico,2025-05,8,Não,Sim,4.2,95,Presencial
+C014,Financeiro,Assistente Fiscal,Masculino,Parda,Compliance Fiscal,2025-05,6,Sim,Sim,3.8,80,Online
+C015,TI,Desenvolvedor Python,Masculino,Branca,Machine Learning Intro,2025-05,16,Não,Sim,4.6,0,Online
+C016,RH,Gerente de RH,Feminino,Branca,Liderança Inclusiva,2025-06,6,Não,Sim,4.4,160,Presencial
+C017,Operações,Operador,Feminino,Preta,Segurança no Trabalho,2025-06,8,Sim,Sim,4.1,255,Presencial
+C018,DP,Analista Benefícios,Feminino,Parda,eSocial,2025-06,8,Sim,Sim,4.0,70,Online
+C019,Facilities,Supervisor Portaria,Masculino,Preta,Gestão de Terceiros,2025-07,6,Não,Não,,130,Híbrido
+C020,Logística,Operador Empilhadeira,Masculino,Parda,Reciclagem Empilhadeira,2025-07,8,Sim,Sim,4.3,230,Presencial
+C021,RH,Analista Cargos Salários,Feminino,Branca,People Analytics,2025-07,12,Não,Sim,4.8,0,Online
+C022,SST,Enfermeiro Trabalho,Feminino,Parda,Primeiros Socorros,2025-08,8,Sim,Sim,4.7,220,Presencial
+C023,Administrativo,Aprendiz,Feminino,Preta,Integração,2025-08,6,Sim,Sim,4.5,150,Presencial
+C024,TI,Estagiário Dados,Masculino,Parda,Python Básico,2025-08,12,Não,Sim,4.4,0,Online
+C025,RH,Coordenador Treinamento,Masculino,Branca,Facilitação,2025-09,10,Não,Sim,4.2,100,Híbrido
+C026,Operações,Operador,Masculino,Parda,Qualidade,2025-09,6,Sim,Sim,3.7,190,Presencial
+C027,Financeiro,Analista Contábil,Feminino,Preta,Excel para Indicadores,2025-09,10,Não,Não,,115,Híbrido
+C028,DP,Assistente de DP,Masculino,Branca,Legislação Trabalhista,2025-10,8,Sim,Sim,4.1,90,Online
+C029,Facilities,Recepcionista,Feminino,Parda,Atendimento ao Cliente,2025-10,4,Não,Sim,4.0,65,Presencial
+C030,RH,Analista de RH,Feminino,Indígena,Entrevista por Competências,2025-10,8,Não,Sim,4.9,85,Híbrido
