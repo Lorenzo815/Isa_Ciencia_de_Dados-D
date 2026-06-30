@@ -48,15 +48,17 @@ Ao final da trilha, a pessoa deve conseguir:
 
 ## Metodo de estudo
 
-Cada aula deve ser estudada em quatro passagens.
+Cada aula deve ser estudada em quatro passagens. Nao tente fazer tudo de uma vez; o conhecimento se assenta entre uma passagem e outra.
 
-Na primeira passagem, leia a teoria sem tentar memorizar tudo. O objetivo e construir vocabulario: tabela, indicador, variavel, hipotese, amostra, modelo, erro.
+**Primeira passagem - leitura larga.** Leia a teoria sem tentar memorizar. O objetivo e construir vocabulario: tabela, indicador, variavel, distribuicao, hipotese, amostra, modelo, erro. Sublinhe palavras que voce nao conhece, mas siga em frente.
 
-Na segunda passagem, abra os dados e reproduza os exemplos. Nao avance se uma coluna, formula ou grafico nao fizer sentido. Ciencia de dados se aprende muito pelo atrito com os detalhes.
+**Segunda passagem - reproducao.** Abra os dados e reproduza os exemplos. Nao avance se uma coluna, formula ou grafico nao fizer sentido. Ciencia de dados se aprende muito pelo atrito com os detalhes. Se travar em algo, volte para a aula e leia de novo a parte que define aquele conceito.
 
-Na terceira passagem, responda as perguntas e respostas da aula. Elas foram escritas para corrigir confusoes comuns de iniciantes.
+**Terceira passagem - perguntas e respostas.** Responda as perguntas e respostas da aula com suas proprias palavras antes de ler a resposta sugerida. Elas foram escritas para corrigir confusoes comuns de iniciantes.
 
-Na quarta passagem, faca os exercicios. Os exercicios estao divididos em fixacao, aplicacao e desafio. A fixacao treina conceito; a aplicacao liga o conceito ao RH; o desafio pede interpretacao.
+**Quarta passagem - exercicios.** Os exercicios estao divididos em **fixacao** (treina conceito), **aplicacao** (liga o conceito ao RH) e **desafio** (pede interpretacao e narrativa). Faca fixacao antes de aplicacao; faca aplicacao antes de desafio.
+
+Dica adicional: quando aprender uma palavra nova (ex: "normalidade", "overfitting", "DataFrame"), tente explica-la em voz alta para alguem leigo. Se voce nao consegue explicar, ainda nao entendeu.
 
 ## O ciclo de uma boa analise
 

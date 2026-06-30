@@ -8,17 +8,22 @@ A meta nao e apenas rodar `scikit-learn`. A meta e entender o raciocinio: qual v
 
 ## 1. O que e um modelo preditivo
 
-Um modelo preditivo e uma funcao que aprende padroes em dados historicos para estimar um resultado em novos casos.
+Um modelo preditivo e uma "formula aprendida" que recebe informacoes conhecidas sobre um caso e devolve uma previsao sobre algo desconhecido. Em vez de voce escrever a formula a mao, o algoritmo encontra a melhor formula olhando muitos exemplos historicos.
+
+Dois tipos basicos:
+
+- **Regressao:** preve um numero. Ex: quantos dias uma vaga vai levar para fechar.
+- **Classificacao:** preve uma categoria. Ex: essa pessoa tem alto ou baixo risco de se desligar.
 
 Em RH, exemplos possiveis:
 
-- Prever time to hire de uma vaga.
-- Estimar custo de divulgacao por contratacao.
-- Classificar risco de desligamento.
-- Identificar treinamentos com maior chance de nao conclusao.
-- Priorizar auditoria de divergencias de ponto.
+- Prever `time_to_hire` de uma vaga nova (regressao).
+- Estimar custo de divulgacao por contratacao (regressao).
+- Classificar risco de desligamento (classificacao).
+- Identificar treinamentos com maior chance de nao conclusao (classificacao).
+- Priorizar auditoria de divergencias de ponto (classificacao).
 
-Um modelo nao entende pessoas, cultura ou contexto sozinho. Ele aprende relacoes nos dados disponiveis. Se os dados forem incompletos, enviesados ou antigos, o modelo herdara esses problemas.
+Um modelo nao entende pessoas, cultura ou contexto sozinho. Ele so aprende relacoes presentes nos dados que voce der. Se os dados forem incompletos, enviesados ou antigos, o modelo herdara esses problemas e os apresentara como se fossem verdades.
 
 ## 2. Variavel alvo e variaveis explicativas
 
@@ -44,14 +49,20 @@ Uma regra importante: use apenas dados que estariam disponiveis no momento da de
 
 ## 3. Treino, teste e generalizacao
 
-Para avaliar um modelo, separamos dados em treino e teste.
+Para avaliar um modelo, separamos os dados historicos em dois pedacos:
 
-- Treino: parte usada para o modelo aprender.
-- Teste: parte guardada para avaliar se ele funciona em dados que nao viu.
+- **Treino:** parte usada para o modelo aprender os padroes. Costuma ser 70% a 80% dos dados.
+- **Teste:** parte guardada para avaliar como ele se sai em casos que nao viu. Costuma ser 20% a 30%.
 
-Isso simula uma situacao real. O objetivo nao e decorar o passado, mas generalizar para casos novos.
+Isso simula uma situacao real: no dia a dia, voce vai usar o modelo em vagas ou pessoas novas. Se ele so funcionar nos dados em que aprendeu, e inutil.
 
-Quando um modelo se ajusta demais ao treino e falha no teste, chamamos de overfitting. Em linguagem simples: ele decorou exemplos em vez de aprender um padrao util.
+O objetivo nao e **decorar** o passado, e sim **generalizar** para casos novos.
+
+**Overfitting** (super-ajuste) acontece quando o modelo decora o treino e falha no teste. E como um estudante que decora as respostas da prova antiga mas erra a prova nova. Sinal classico: desempenho otimo no treino e ruim no teste.
+
+**Underfitting** (sub-ajuste) e o oposto: o modelo e tao simples que nao aprende nem o treino. Sinal: desempenho ruim em ambos.
+
+A arte de modelar e ficar no meio: aprender o suficiente para generalizar, sem decorar.
 
 ## 4. Regressao linear
 
@@ -73,13 +84,19 @@ Cuidado: regressao linear supoe uma relacao simples. Processos de RH podem ter e
 
 ## 5. Metricas de regressao
 
-**Erro medio absoluto:** mostra, em media, quanto o modelo erra na unidade original. Se o alvo e dias, o erro tambem e em dias. E uma metrica facil de explicar.
+Uma metrica e um numero que resume o quao bem o modelo esta acertando. Para regressao, as duas mais usadas sao:
 
-**R²:** indica quanto da variacao do alvo o modelo consegue explicar. Pode ser util, mas nao deve ser interpretado sozinho.
+**Erro medio absoluto (MAE):** pega cada erro (previsto menos real), tira o sinal (valor absoluto) e calcula a media. Mostra, em media, o quanto o modelo erra na unidade original. Se o alvo e `time_to_hire_dias`, o MAE tambem e em dias. E a metrica mais facil de explicar para uma pessoa de negocio.
+
+**R² (R quadrado, ou coeficiente de determinacao):** indica que fracao da variacao do alvo o modelo consegue explicar. Vai de 0 (o modelo nao explica nada melhor que a media) a 1 (explica perfeitamente). Pode ser negativo se o modelo for pior que simplesmente "chutar a media".
+
+  - R² = 0,80 significa que 80% da variacao do alvo e capturada pelas variaveis explicativas.
+  - R² alto nao garante que o modelo seja util: ele pode ter aprendido com vazamento de dados ou estar superajustado.
+  - R² baixo nao significa que o modelo seja inutil: em RH, fenomenos sao complexos, e R² de 0,3 ja pode ajudar uma decisao.
 
 Exemplo de comunicacao:
 
-> O modelo erra em media 6 dias na base de teste. Isso significa que ele pode apoiar planejamento, mas nao deve ser usado como promessa de SLA.
+> O modelo erra em media 6 dias na base de teste (MAE = 6) e explica cerca de 40% da variacao do tempo de fechamento (R² = 0,40). Isso significa que ele pode apoiar planejamento de recrutamento, mas nao deve ser usado como promessa de SLA.
 
 ## 6. Arvore de decisao
 
@@ -100,17 +117,28 @@ Por isso, nos notebooks usamos profundidade limitada. Uma arvore menor geralment
 
 ## 7. Metricas de classificacao
 
-Quando o alvo e uma classe, como desligou ou nao desligou, usamos metricas de classificacao.
+Quando o alvo e uma classe (como "desligou" ou "nao desligou"), nao faz sentido calcular erro em dias ou em reais. Usamos metricas que olham acertos e erros por categoria.
 
-**Acuracia:** percentual geral de acertos. Pode enganar se uma classe for muito mais comum.
+Antes das metricas, quatro contagens basicas. Imagine que voce esta tentando prever quem vai se desligar:
 
-**Matriz de confusao:** mostra acertos e erros por classe.
+- **VP (verdadeiro positivo):** o modelo disse "vai desligar" e a pessoa desligou. Acerto.
+- **VN (verdadeiro negativo):** o modelo disse "nao vai desligar" e a pessoa ficou. Acerto.
+- **FP (falso positivo):** o modelo disse "vai desligar" e a pessoa ficou. Alarme falso.
+- **FN (falso negativo):** o modelo disse "nao vai desligar" e a pessoa desligou. Alarme perdido.
 
-**Recall:** entre os casos positivos reais, quantos o modelo encontrou.
+A **matriz de confusao** e uma tabela 2x2 que mostra essas quatro contagens lado a lado. E a foto mais completa do desempenho.
 
-**Precisao:** entre os casos que o modelo marcou como positivos, quantos eram positivos de fato.
+A partir delas:
 
-Em turnover, falsos positivos e falsos negativos tem impactos diferentes. Um falso positivo pode gerar preocupacao indevida; um falso negativo pode perder chance de apoio. A metrica deve ser escolhida com a finalidade do uso.
+**Acuracia:** (VP + VN) / total. Percentual geral de acertos. Pode enganar se uma classe for muito mais comum: se so 5% desliga, um modelo que sempre diz "nao desliga" tem 95% de acuracia e e inutil para o problema.
+
+**Recall (ou sensibilidade):** VP / (VP + FN). Entre todos que realmente desligaram, quantos o modelo conseguiu encontrar. Alto recall = poucos alarmes perdidos. Importante quando perder um caso e custoso.
+
+**Precisao:** VP / (VP + FP). Entre todos os que o modelo marcou como "vai desligar", quantos realmente desligaram. Alta precisao = poucos alarmes falsos. Importante quando agir indevidamente custa caro.
+
+**F1:** uma media harmonica entre precisao e recall, util quando voce quer um numero unico que equilibre os dois.
+
+Em turnover, falsos positivos e falsos negativos tem impactos diferentes. Um falso positivo pode gerar preocupacao indevida sobre alguem que ia ficar; um falso negativo pode fazer voce perder a chance de uma conversa de retencao com quem realmente ia sair. A metrica certa depende de qual erro doi mais para o RH.
 
 ## 8. Etica e governanca em modelos de RH
 

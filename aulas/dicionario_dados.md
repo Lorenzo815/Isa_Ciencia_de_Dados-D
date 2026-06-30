@@ -1,6 +1,13 @@
 # Dicionário de dados
 
-Este arquivo explica as principais colunas usadas no curso.
+Este arquivo explica as principais colunas usadas no curso. Use-o como consulta rápida sempre que cruzar com uma coluna desconhecida em um notebook ou exercício.
+
+Convenções gerais:
+
+- `*_id` é uma chave que identifica a linha de forma única.
+- Datas estão no formato `AAAA-MM-DD`.
+- Variáveis sensíveis (gênero, raça, salário) só devem ser usadas para análises agregadas e com finalidade clara.
+- Os datasets são sintéticos: úteis para aprender, inadequados para conclusões reais sobre empresas, pessoas ou políticas públicas.
 
 ## `dados/vagas_recrutamento.csv`
 
@@ -50,6 +57,14 @@ Este arquivo explica as principais colunas usadas no curso.
 | `nota_performance` | Avaliação fictícia de performance, de 1 a 5 |
 | `desligou_12m` | 1 se desligou em até 12 meses, 0 caso contrário |
 
+## `dados/distribuicoes_exercicio.xlsx` e `dados/distribuicoes_resolvido.xlsx`
+
+Planilhas multi-abas usadas na Aula 2 para praticar distribuições e escolha de testes estatísticos. A aba `Dados` traz 1.200 colaboradores sintéticos com colunas numéricas de distribuições diferentes (lognormal, normal, exponencial, gamma, Poisson, bimodal) e categóricas (`area`, `genero`, `tipo_contrato`). O arquivo resolvido inclui estatísticas, histogramas, testes de normalidade, decisão entre paramétrico e não paramétrico, e testes prontos com interpretação.
+
+Veja a aba `Dicionario` dentro do arquivo para descrição coluna a coluna.
+
 ## Observação ética
 
 Dados sensíveis como gênero e raça devem ser usados para medir equidade, barreiras e representatividade. Eles não devem ser usados para discriminar, punir ou automatizar decisões individuais sem governança adequada.
+
+Mesmo em dados sintéticos como os deste curso, é boa prática treinar o reflexo: pergunte sempre "que decisão essa análise pode influenciar?" e "quem pode ser prejudicado se eu interpretar mal?".

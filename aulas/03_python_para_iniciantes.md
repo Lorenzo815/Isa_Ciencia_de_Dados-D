@@ -19,24 +19,32 @@ Excel e excelente para explorar dados pequenos, criar tabelas dinamicas e fazer 
 
 Python ajuda nesses pontos porque transforma a analise em instrucoes. Em vez de clicar varias vezes, escrevemos uma receita. Se a receita estiver correta, ela pode ser executada de novo com dados atualizados.
 
-## 2. O que e pandas
+## 2. Tres palavras antes do codigo: biblioteca, DataFrame, variavel
 
-Pandas e uma biblioteca Python para trabalhar com dados tabulares. Sua estrutura principal e o `DataFrame`, que pode ser entendido como uma tabela com linhas e colunas.
+Antes de digitar qualquer linha, vale fixar tres palavras que vao aparecer o tempo todo.
 
-Quando escrevemos:
+**Biblioteca:** e um conjunto pronto de funcoes que outras pessoas ja escreveram e que voce pode reusar. E como um caderno de receitas. Em Python, voce "abre o caderno" com a palavra `import`. Pandas e uma biblioteca para trabalhar com tabelas. Numpy e para calculos numericos. Matplotlib e para graficos. Voce nao precisa decorar os nomes; importe quando precisar.
+
+**DataFrame:** e a "folha de planilha" do pandas. Tem linhas, colunas e cabecalho, igual a uma aba do Excel. A diferenca e que voce manipula com codigo, nao com mouse. Quando voce le um CSV com pandas, recebe um DataFrame.
+
+**Variavel:** e um nome que voce da para guardar um valor ou objeto. Quando escrevemos `vagas = pd.read_csv(...)`, a palavra `vagas` passa a ser um apelido para a tabela carregada. A partir dali, tudo que voce fizer com `vagas` afeta aquele DataFrame.
+
+Juntando os tres em uma frase: "Eu importo a *biblioteca* pandas, leio um CSV que vira um *DataFrame*, e guardo esse DataFrame na *variavel* `vagas`".
+
+Na pratica:
 
 ```python
 import pandas as pd
 vagas = pd.read_csv("dados/vagas_recrutamento.csv")
 ```
 
-Estamos dizendo:
+Leitura linha a linha:
 
-1. Carregue a biblioteca pandas.
-2. Leia o arquivo CSV.
-3. Guarde a tabela dentro de uma variavel chamada `vagas`.
+1. `import pandas as pd`: abra o caderno de receitas chamado pandas, mas use o apelido `pd` (por economia de digitacao).
+2. `pd.read_csv("dados/vagas_recrutamento.csv")`: pede ao pandas para ler um arquivo CSV.
+3. `vagas = ...`: guarda o resultado em uma variavel chamada `vagas`.
 
-Uma variavel e como um nome dado a um objeto. Nesse caso, `vagas` passa a representar a tabela de recrutamento.
+A partir daqui, `vagas` e um DataFrame que voce pode filtrar, contar, agrupar.
 
 ## 3. Tradução Excel para pandas
 
@@ -129,15 +137,15 @@ O ponto mais importante e interpretar o agrupamento como uma pergunta. Sem pergu
 
 ## 8. Erros comuns de iniciantes
 
-**Caminho do arquivo errado:** o notebook pode estar rodando de dentro da pasta `notebooks/`. Por isso os notebooks do curso usam logica para encontrar a pasta `dados/`.
+**Caminho do arquivo errado:** o notebook pode estar rodando de dentro da pasta `notebooks/`, e o CSV esta em `dados/`. "Caminho" e a sequencia de pastas que leva ao arquivo. Se voce estiver dentro de `notebooks/`, precisa subir um nivel para encontrar `dados/`. Os notebooks do curso ja fazem essa logica usando `Path(__file__).parent` para descobrir onde estao.
 
-**Nome de coluna diferente:** Python diferencia maiusculas, minusculas, acentos e espacos. `area` e diferente de `Área`.
+**Nome de coluna diferente:** Python diferencia maiusculas, minusculas, acentos e espacos. `area` e diferente de `Área` e diferente de `Area `. Quando der erro de coluna, imprima `vagas.columns` para ver os nomes exatos.
 
-**Numero importado como texto:** se uma coluna numerica aparece como texto, medias e somas podem falhar.
+**Numero importado como texto:** se uma coluna numerica veio com virgula decimal, com `R$`, com espaco ou com aspas, ela vira texto. `media` em texto falha. Use `vagas.dtypes` para conferir o tipo de cada coluna.
 
-**Filtro sem parenteses:** ao combinar condicoes, use parenteses em cada uma.
+**Filtro sem parenteses:** ao combinar condicoes com `&` (e) ou `|` (ou), envolva cada condicao em parenteses. Sem isso, Python interpreta na ordem errada.
 
-**Alterar dados sem perceber:** sempre que criar uma coluna, confira algumas linhas com `.head()`.
+**Alterar dados sem perceber:** sempre que criar uma coluna nova, confira com `.head()` se o resultado faz sentido. Erros silenciosos sao os mais perigosos.
 
 ## 9. Como estudar os notebooks
 

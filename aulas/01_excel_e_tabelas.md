@@ -8,15 +8,17 @@ Ao final, a pessoa estudante deve conseguir abrir um CSV no Excel, transformar o
 
 ## 1. O que e uma tabela analitica
 
-Uma tabela analitica e uma estrutura em que cada linha representa uma observacao e cada coluna representa uma caracteristica dessa observacao. Parece simples, mas essa definicao evita muitos erros.
+Uma tabela analitica e uma estrutura em que **cada linha representa uma observacao** e **cada coluna representa uma caracteristica dessa observacao**. Observacao e o "sujeito da frase": pode ser uma vaga, uma pessoa, um treinamento, um registro de ponto ou um mes. Parece simples, mas essa definicao evita metade dos erros que aparecem em planilhas reais.
 
-Em recrutamento, uma linha pode representar uma vaga. Nesse caso, colunas como `cargo`, `area`, `source_of_hire`, `data_abertura` e `time_to_hire_dias` descrevem aquela vaga.
+A palavra mais importante aqui e **unidade de analise**: o que cada linha representa. Toda a leitura dos indicadores depende disso.
 
-Em treinamento, uma linha pode representar a participacao de uma pessoa em um treinamento. Nesse caso, colunas como `colaborador_id`, `treinamento`, `horas_treinamento`, `concluiu` e `nota_eficacia` descrevem aquela participacao.
+Em recrutamento, uma linha pode representar **uma vaga**. As colunas (`cargo`, `area`, `source_of_hire`, `data_abertura`, `time_to_hire_dias`) descrevem aquela vaga especifica.
 
-Em indicadores mensais, uma linha pode representar um mes. Nesse caso, colunas como `headcount_inicio`, `admitidos`, `demitidos` e `ausencias_dias` descrevem aquele periodo.
+Em treinamento, uma linha pode representar **uma participacao de uma pessoa em um treinamento**. As colunas (`colaborador_id`, `treinamento`, `horas_treinamento`, `concluiu`, `nota_eficacia`) descrevem aquela participacao. Atencao: a mesma pessoa pode aparecer em varias linhas se fez varios treinamentos.
 
-O erro mais comum de iniciantes e misturar unidades de analise. Por exemplo: colocar na mesma linha informacoes de uma vaga, de uma pessoa e de um mes sem deixar claro o que a linha representa. Quando a unidade de analise fica confusa, os indicadores tambem ficam confusos.
+Em indicadores mensais, uma linha pode representar **um mes**. As colunas (`headcount_inicio`, `admitidos`, `demitidos`, `ausencias_dias`) descrevem aquele periodo.
+
+O erro mais comum de iniciantes e misturar unidades de analise: colocar na mesma linha informacoes de uma vaga, de uma pessoa e de um mes sem deixar claro o que a linha representa. Quando a unidade de analise fica confusa, os indicadores tambem ficam. Antes de qualquer calculo, faca a pergunta: **"o que cada linha desta tabela representa?"**. Se voce nao souber responder em uma frase, pare e investigue.
 
 ## 2. Vocabulario essencial
 
@@ -51,21 +53,26 @@ Arquivo: `dados/vagas_recrutamento.csv`
 
 Pergunta de negocio: quais fontes de contratacao parecem mais rapidas e quais parecem mais caras?
 
+**Antes dos passos, dois termos novos:**
+
+- **Tabela do Excel** (`Ctrl + T`): converte um intervalo de celulas em um objeto "tabela" com cabecalho, filtros automaticos e expansao quando voce adiciona linhas. Diferente de simplesmente formatar.
+- **Tabela dinamica** (`Pivot Table`, em ingles): uma ferramenta do Excel que permite arrastar campos para Linhas, Colunas e Valores para gerar resumos automaticamente. E o equivalente visual do `groupby` que voce vai ver em pandas mais tarde.
+
 Passos no Excel:
 
-1. Abra o CSV.
-2. Transforme o intervalo em tabela com `Ctrl + T`.
-3. Confirme se `time_to_hire_dias`, `candidatos`, `contratados` e `custo_divulgacao` estao como numeros.
-4. Crie uma tabela dinamica.
-5. Coloque `source_of_hire` em linhas.
-6. Coloque `vaga_id` em valores como contagem.
-7. Coloque `time_to_hire_dias` em valores como media.
-8. Coloque `custo_divulgacao` em valores como soma.
-9. Crie uma coluna calculada fora da dinamica: custo por contratado = custo total / contratados.
+1. Abra o CSV (Arquivo > Abrir > selecione o arquivo).
+2. Selecione qualquer celula com dados e aperte `Ctrl + T`. Marque "Minha tabela tem cabecalhos".
+3. Confirme se `time_to_hire_dias`, `candidatos`, `contratados` e `custo_divulgacao` estao alinhados a direita (sinal de numero) e nao a esquerda (sinal de texto).
+4. Em `Inserir > Tabela Dinamica`, crie uma tabela dinamica em uma nova aba.
+5. Arraste `source_of_hire` para `Linhas`.
+6. Arraste `vaga_id` para `Valores` e mude o resumo para `Contagem`.
+7. Arraste `time_to_hire_dias` para `Valores` e mude para `Media`.
+8. Arraste `custo_divulgacao` para `Valores` e mantenha `Soma`.
+9. Fora da dinamica, crie uma coluna chamada `custo_por_contratado` = custo total / contratados.
 
 Como interpretar:
 
-Uma fonte com baixo time to hire pode ser interessante, mas isso nao basta. Tambem precisamos olhar volume, custo, tipo de cargo e senioridade. Se uma fonte fechou apenas uma vaga junior, ela nao deve ser comparada diretamente com uma fonte que fechou cargos senior complexos.
+Uma fonte com baixo time to hire pode parecer atrativa, mas isso nao basta. Tambem precisamos olhar volume (quantas vagas), custo, tipo de cargo e senioridade. Se uma fonte fechou apenas uma vaga junior, ela nao deve ser comparada diretamente com uma fonte que fechou varios cargos senior complexos. Em RH, comparar grupos diferentes como se fossem iguais e a raiz de muitas conclusoes erradas.
 
 ## 5. Segunda pratica: treinamentos
 
